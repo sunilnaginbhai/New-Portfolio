@@ -163,6 +163,7 @@
     if (!container) return;
     const words = Array.from(container.children);
     if (words.length < 2) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
     // Measure widths
     const widths = words.map(w => {
