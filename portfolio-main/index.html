@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sunil Patel · Student developer learning full-stack development</title>
+  <meta name="description"
+    content="Sunil Patel is a student developer learning full-stack web development at Sheryians Coding School as part of Cohort 3.0.">
+  <meta name="theme-color" content="#FFF4E2">
+  <meta name="keywords"
+    content="Sunil Patel, Student Developer, Sheryians Coding School, Cohort 3.0, React, JavaScript, Portfolio">
+  <meta name="author" content="Sunil Patel">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="favicon_io/favicon.ico">
+  <link rel="apple-touch-icon" href="favicon_io/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=DM+Sans:wght@400;500;600;700&family=Space+Mono&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+
+<body>
+  <a class="sr-only" href="#main">Skip to content</a>
+  <div class="scroll-progress" data-scroll-progress aria-hidden="true"></div>
+  <div class="cursor-glow" data-cursor-glow aria-hidden="true"></div>
+  <div class="cursor-dot" data-cursor-dot aria-hidden="true"></div>
+  <div class="cursor-ring" data-cursor-ring aria-hidden="true"></div>
+
+  <!-- Nav -->
+  <header class="nav" id="site-nav" data-nav>
+    <div class="wrap">
+      <div class="nav-pill">
+        <a class="logo" href="#top" aria-label="SP, back to top">SP</a>
+        <a class="nav-identity" href="#about" aria-label="About Sunil Patel">
+          <strong>Sunil Patel</strong>
+          <span>Software Engineer</span>
+        </a>
+        <nav class="desktop-nav" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#work">Work</a>
+          <a href="#skills">Skills</a>
+          <a href="#manual">Engineering approach</a>
+          <a href="#achievements">Achievements</a>
+        </nav>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
+          <span></span><span></span><span></span>
+          <span class="sr-only">Open menu</span>
+        </button>
+      </div>
+      <div class="nav-actions">
+        <button class="btn sm sun" type="button" id="tldr-open-btn" data-tldr-open>
+          <span class="wiggle">
+            <svg class="ei ei-stopwatch" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+              <circle cx="12" cy="13.5" r="8" fill="var(--cream)" stroke="var(--ink)" stroke-width="1.8" />
+              <rect x="10" y="2.2" width="4" height="2.8" rx="1" fill="var(--tomato)" stroke="var(--ink)"
+                stroke-width="1.2" />
+              <path d="M12 7.3v1.1M12 18.6v1.1M5.8 13.5h1.1M17.1 13.5h1.1" stroke="var(--ink)" stroke-width="1.2"
+                stroke-linecap="round" />
+              <path d="M12 13.5V8.6" stroke="var(--ink)" stroke-width="1.5" stroke-linecap="round" />
+              <circle cx="12" cy="13.5" r="1.3" fill="var(--ink)" />
+            </svg>
+          </span>
+          60-second version
+        </button>
+        <a class="btn sm" href="#contact">Let's talk</a>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobile-menu" data-mobile-menu>
+      <nav aria-label="Mobile primary">
+        <a href="#about">01 <span>About</span></a>
+        <a href="#work">02 <span>Work</span></a>
+        <a href="#skills">03 <span>Skills</span></a>
+        <a href="#path">04 <span>Professional path</span></a>
+        <a href="#achievements">05 <span>Achievements</span></a>
+        <a href="#quests">06 <span>Side quests</span></a>
+        <a href="#manual">07 <span>Engineering approach</span></a>
+        <a href="#contact">08 <span>Contact</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="top" data-hero>
+    <div class="wrap">
+      <!-- Circular profile badge -->
+      <div class="badge">
+        <svg class="ring" viewBox="0 0 320 320" role="img" aria-labelledby="profile-badge-title">
+          <title id="profile-badge-title">Sunil Patel, developer learning and building</title>
+          <defs>
+            <path id="profile-circle-path" d="M160 160 m-142 0 a142 142 0 1 1 284 0 a142 142 0 1 1 -284 0" />
+          </defs>
+          <circle class="badge-halo" cx="160" cy="160" r="116" />
+          <circle class="badge-ring" cx="160" cy="160" r="108" />
+          <circle class="badge-dots" cx="160" cy="160" r="98" />
+          <g class="text-orbit">
+            <text class="badge-text">
+              <textPath href="#profile-circle-path" startOffset="0%">DEVELOPER • LEARNING AND BUILDING • </textPath>
+            </text>
+          </g>
+        </svg>
+        <div class="face">
+          <img class="profile-photo" src="assets/images/sunil%20photo%20.png" alt="Sunil Patel">
+        </div>
+      </div>
+
+      <p class="hello">
+        <span class="word" data-hello aria-hidden="true">
+          <span class="on">Hi</span>
+        </span>
+        <span class="sr-only">Hi,</span>
+        <span>I'm Sunil, learning software engineering</span>
+        <svg class="ei ei-wave wave" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+          <rect x="7.2" y="3.6" width="3" height="9" rx="1.5" fill="var(--sun)" stroke="var(--ink)"
+            stroke-width="1.3" />
+          <rect x="10.4" y="2.6" width="3" height="10" rx="1.5" fill="var(--sun)" stroke="var(--ink)"
+            stroke-width="1.3" />
+          <rect x="13.6" y="3.3" width="3" height="9.5" rx="1.5" fill="var(--sun)" stroke="var(--ink)"
+            stroke-width="1.3" />
+          <rect x="16.7" y="5.3" width="2.8" height="8" rx="1.4" fill="var(--sun)" stroke="var(--ink)"
+            stroke-width="1.3" />
+          <rect x="3.4" y="10.4" width="3" height="7" rx="1.5" fill="var(--sun)" stroke="var(--ink)" stroke-width="1.3"
+            transform="rotate(-38 4.9 13.9)" />
+          <rect x="6.6" y="9.6" width="13" height="11.6" rx="5" fill="var(--sun)" stroke="var(--ink)"
+            stroke-width="1.3" />
+        </svg>
+      </p>
+
+      <h1 class="headline" data-split aria-label="I build digital products that people love to use.">
+        I build digital products that <span class="hl">people love to use.</span>
+      </h1>
+
+      <ul class="bring">
+        <li class="pop" style="--c:var(--sun);--tilt:-1.5deg;--d:700ms">
+          <svg class="biz" viewBox="5 0 44 42" aria-hidden="true">
+            <path class="biz-base" d="M8 38h32" stroke="var(--ink)" stroke-width="2.5" stroke-linecap="round" />
+            <rect class="biz-bar" x="10" y="29" width="7" height="9" rx="1.5" fill="var(--cobalt)" stroke="var(--ink)"
+              stroke-width="2" style="--b:0" />
+            <rect class="biz-bar" x="20" y="24" width="7" height="14" rx="1.5" fill="var(--cobalt)" stroke="var(--ink)"
+              stroke-width="2" style="--b:1" />
+            <rect class="biz-bar" x="30" y="18" width="7" height="20" rx="1.5" fill="var(--cobalt)" stroke="var(--ink)"
+              stroke-width="2" style="--b:2" />
+            <path class="biz-line biz-ink" pathLength="1" d="M7 18l8-6 7 3 13-11" fill="none" stroke="var(--ink)"
+              stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+            <path class="biz-arrow biz-ink" pathLength="1" d="M28.5 4h7v7" fill="none" stroke="var(--ink)"
+              stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+            <path class="biz-line" pathLength="1" d="M7 18l8-6 7 3 13-11" fill="none" stroke="var(--tomato)"
+              stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+            <path class="biz-arrow" pathLength="1" d="M28.5 4h7v7" fill="none" stroke="var(--tomato)" stroke-width="3.2"
+              stroke-linecap="round" stroke-linejoin="round" />
+            <path class="biz-spark" d="M44.5 10.5l1.3 3.2 3.2 1.3-3.2 1.3-1.3 3.2-1.3-3.2-3.2-1.3 3.2-1.3z"
+              fill="var(--cream)" stroke="var(--ink)" stroke-width="1.4" stroke-linejoin="round" />
+          </svg>
+          <h3>Interfaces that feel effortless.</h3>
+          <p>Accessible React interfaces with thoughtful states, responsive layouts and strong performance.</p>
+        </li>
+        <li class="pop" style="--c:var(--mint);--tilt:1.2deg;--d:800ms">
+          <svg class="biz biz-team" viewBox="5 0 44 42" aria-hidden="true">
+            <path d="M27 20.5v3.5M14 27v-3h26v3M27 24v3" fill="none" stroke="var(--ink)" stroke-width="2.2"
+              stroke-linecap="round" />
+            <path d="M20.5 20q0-6.5 6.5-6.5t6.5 6.5z" fill="var(--cobalt)" stroke="var(--ink)" stroke-width="2" />
+            <circle cx="27" cy="8" r="4.2" fill="var(--cream)" stroke="var(--ink)" stroke-width="2" />
+            <path d="M8.5 40q0-5 5.5-5t5.5 5z" fill="var(--tomato)" stroke="var(--ink)" stroke-width="2" />
+            <circle cx="14" cy="31" r="3.4" fill="var(--cream)" stroke="var(--ink)" stroke-width="2" />
+            <path d="M21.5 40q0-5 5.5-5t5.5 5z" fill="var(--sun)" stroke="var(--ink)" stroke-width="2" />
+            <circle cx="27" cy="31" r="3.4" fill="var(--cream)" stroke="var(--ink)" stroke-width="2" />
+            <path d="M34.5 40q0-5 5.5-5t5.5 5z" fill="var(--lilac)" stroke="var(--ink)" stroke-width="2" />
+            <circle cx="40" cy="31" r="3.4" fill="var(--cream)" stroke="var(--ink)" stroke-width="2" />
+          </svg>
+          <h3>Systems that stay reliable.</h3>
+          <p>Learning to connect reusable components, clear APIs and maintainable code through practice projects.</p>
+        </li>
+        <li class="pop" style="--c:var(--lilac);--tilt:-1deg;--d:900ms">
+          <svg class="biz biz-lang" viewBox="5 0 44 42" aria-hidden="true">
+            <path d="M12 4h12a5 5 0 0 1 5 5v5a5 5 0 0 1-5 5H15l-5 4v-4.6A5 5 0 0 1 7 14V9a5 5 0 0 1 5-5z"
+              fill="var(--cobalt)" stroke="var(--ink)" stroke-width="2" />
+            <text x="18" y="15.6" fill="var(--cream)" font-family="var(--display)" font-weight="800" font-size="10.5"
+              text-anchor="middle">A</text>
+            <path d="M31 8.5q8-1 9.5 9" fill="none" stroke="var(--ink)" stroke-width="2.2" stroke-linecap="round" />
+            <path d="M37.2 15.2l3.3 3.3 3-3.6" fill="none" stroke="var(--ink)" stroke-width="2.2" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path d="M27 21h13a5 5 0 0 1 5 5v5a5 5 0 0 1-1.5 3.6V39l-5-3H27a5 5 0 0 1-5-5v-5a5 5 0 0 1 5-5z"
+              fill="var(--tomato)" stroke="var(--ink)" stroke-width="2" />
+            <text x="33.5" y="32.6" fill="var(--cream)" font-family="var(--display)" font-weight="800" font-size="10.5"
+              text-anchor="middle">あ</text>
+          </svg>
+          <h3>Curious across the stack.</h3>
+          <p>Exploring frontend polish, backend logic, databases and deployment one project at a time.</p>
+        </li>
+      </ul>
+
+      <div class="hero-ctas pop" style="--d:1000ms">
+        <a class="btn" href="#work">See what I build <span aria-hidden="true">↓</span></a>
+        <button class="btn cream" type="button" data-tldr-open>Short on time? 60-second version</button>
+        <a class="link" href="#contact">Get in touch ↓</a>
+      </div>
+      <nav class="hero-socials pop" aria-label="Important links" style="--d:1100ms">
+        <a href="mailto:sunilnaginbhai@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/sunil-patel-5ab064384/" target="_blank"
+          rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/sunilnaginbhai" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://leetcode.com/u/sunil_snp/" target="_blank" rel="noopener noreferrer">LeetCode</a>
+        <a href="assets/files/Sunil_Patel_Resume_v2.pdf" download>Resume</a>
+      </nav>
+    </div>
+
+    <!-- Draggable stickers (desktop) -->
+    <span class="sticker round" style="--x:66%;--y:33rem;--c:var(--sun);--rot:-10deg" data-sticker
+      aria-hidden="true"><span><b>3.0</b>coding cohort</span></span>
+    <span class="sticker" style="--x:74%;--y:32.5rem;--c:var(--pink);--rot:6deg" data-sticker aria-hidden="true">
+      <svg class="ei" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+        <path
+          d="M7 7.5h10a4.5 4.5 0 0 1 4.5 4.5v1.8a3.4 3.4 0 0 1-6 2.2l-1.3-1.6H9.8L8.5 16a3.4 3.4 0 0 1-6-2.2V12A4.5 4.5 0 0 1 7 7.5z"
+          fill="var(--cobalt)" stroke="var(--ink)" stroke-width="1.3" />
+        <path d="M5.9 10.7h1.6V9.1h1.4v1.6h1.6v1.4H8.9v1.6H7.5v-1.6H5.9z" fill="var(--cream)" />
+        <circle cx="16" cy="10.8" r="1.25" fill="var(--tomato)" stroke="var(--ink)" stroke-width=".8" />
+        <circle cx="18.3" cy="13" r="1.25" fill="var(--sun)" stroke="var(--ink)" stroke-width=".8" />
+      </svg>
+      learning by building
+    </span>
+    <span class="sticker" style="--x:71%;--y:38.5rem;--c:var(--mint);--rot:-4deg" data-sticker aria-hidden="true">
+      <svg class="ei" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+        <rect x="3" y="6" width="18" height="12" rx="3" fill="var(--cobalt)" stroke="var(--ink)" stroke-width="1.3" />
+        <rect x="6" y="9" width="12" height="6" rx="2" fill="var(--cream)" stroke="var(--ink)" stroke-width="1" />
+        <circle cx="10" cy="11.5" r="1.2" fill="var(--ink)" />
+        <circle cx="14" cy="11.5" r="1.2" fill="var(--ink)" />
+        <path d="M10.5 13q1.5 1.2 3 0" fill="none" stroke="var(--ink)" stroke-width="1" stroke-linecap="round" />
+      </svg>
+      practising with AI
+    </span>
+    <span class="sticker" style="--x:84%;--y:36rem;--c:var(--cream);--rot:8deg" data-sticker aria-hidden="true">
+      <svg class="ei" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+        <circle cx="12" cy="12" r="4.6" fill="var(--sun)" stroke="var(--ink)" stroke-width="1.3" />
+        <path
+          d="M12 2.4v2.2M12 19.4v2.2M2.4 12h2.2M19.4 12h2.2M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M5.2 18.8l1.6-1.6M17.2 6.8l1.6-1.6"
+          stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round" />
+      </svg>
+      <span data-clock>Gujarat</span>
+    </span>
+    <span class="drag-hint hand" style="--x:66%;--y:30.4rem" aria-hidden="true">psst, these peel off →</span>
+  </section>
+
+  <!-- Beliefs Marquee -->
+  <div class="beliefs" aria-label="Things I believe">
+    <div class="track">
+      <span>
+        <em class="bl">✦ Ship small, learn quickly</em>
+        <em class="bl">✦ Readable code beats clever code</em>
+        <em class="bl">✦ Performance is a feature</em>
+        <em class="bl">✦ Accessibility is part of done</em>
+        <em class="bl">✦ Test the risky parts first</em>
+        <em class="bl">✦ Build with curiosity</em>
+      </span>
+      <span aria-hidden="true">
+        <em class="bl">✦ Ship small, learn quickly</em>
+        <em class="bl">✦ Readable code beats clever code</em>
+        <em class="bl">✦ Performance is a feature</em>
+        <em class="bl">✦ Accessibility is part of done</em>
+        <em class="bl">✦ Test the risky parts first</em>
+        <em class="bl">✦ Build with curiosity</em>
+      </span>
+    </div>
+  </div>
+
+  <main id="main">
+    <!-- About -->
+    <section class="about" id="about">
+      <div class="wrap about-grid">
+        <div class="about-heading">
+          <p class="kicker mono">01 · About me</p>
+          <h2 class="section-title pop">Learning to<br>build better.</h2>
+        </div>
+        <div class="about-copy pop">
+          <p class="about-lead">I’m Sunil Patel, a student full-stack developer focused on learning how to build
+            scalable, high-performance web applications.</p>
+          <p>I’m currently learning software engineering at Sheryians Coding School as part of Cohort 3.0. I’m
+            practising backend systems, secure and efficient APIs, and responsive, intuitive frontends while turning
+            ideas into reliable products.</p>
+          <div class="about-tags" aria-label="Current focus">
+            <span>Learning software engineering</span>
+            <span>Sheryians Cohort 3.0</span>
+            <span>Building with JavaScript</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="work projects-section" id="work">
+      <div class="wrap">
+        <div class="work-head">
+          <div>
+            <p class="kicker mono">02 · Selected projects</p>
+            <h2 class="section-title pop">Things I’m<br>building.</h2>
+          </div>
+          <p class="pop">Projects from my learning journey — each one helps me practise real-world frontend and
+            full-stack development.</p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card pop" style="--project-accent:var(--cobalt);--d:80ms">
+            <div class="project-visual"><img src="assets/images/common/Resume-analyzer.png"
+                alt="AI Resume Analyzer project preview" loading="lazy"><span class="project-number">01</span><span
+                class="project-window"><i></i><i></i><i></i></span></div>
+            <div class="project-content">
+              <div class="project-top">
+                <p class="mono">React · TypeScript · Puter.js · Vite</p><span class="project-arrow">↗</span>
+              </div>
+              <h3>AI Resume Analyzer</h3>
+              <p>AI-powered resume feedback that helps people understand strengths, improve content and apply with
+                confidence.</p>
+              <div class="project-links"><a href="https://ai-resume-analyzer-gamma-pied.vercel.app/" target="_blank"
+                  rel="noopener noreferrer">Live project</a><a
+                  href="https://github.com/sunilnaginbhai/AI-Resume-Analyzer" target="_blank"
+                  rel="noopener noreferrer">Source code</a></div>
+            </div>
+          </article>
+          <article class="project-card pop" style="--project-accent:var(--tomato);--d:160ms">
+            <div class="project-visual"><img src="assets/images/common/E-commerce-img.png"
+                alt="SkyMart E-commerce project preview" loading="lazy"><span class="project-number">02</span><span
+                class="project-window"><i></i><i></i><i></i></span></div>
+            <div class="project-content">
+              <div class="project-top">
+                <p class="mono">React · Vite · E-commerce</p><span class="project-arrow">↗</span>
+              </div>
+              <h3>SkyMart E-commerce</h3>
+              <p>A responsive shopping experience built with reusable components, clear navigation and a product-first
+                interface.</p>
+              <div class="project-links"><a href="https://sky-mart-e-commerce.vercel.app/" target="_blank"
+                  rel="noopener noreferrer">Live project</a><a
+                  href="https://github.com/sunilnaginbhai/SkyMart-E-commerce" target="_blank"
+                  rel="noopener noreferrer">Source code</a></div>
+            </div>
+          </article>
+          <article class="project-card pop" style="--project-accent:var(--sun);--d:240ms">
+            <div class="project-visual"><img src="assets/images/common/Productive-deshborde-img.png"
+                alt="Productive Dashboard project preview" loading="lazy"><span class="project-number">03</span><span
+                class="project-window"><i></i><i></i><i></i></span></div>
+            <div class="project-content">
+              <div class="project-top">
+                <p class="mono">HTML · CSS · JavaScript</p><span class="project-arrow">↗</span>
+              </div>
+              <h3>Productive Dashboard</h3>
+              <p>An interactive productivity workspace with dynamic UI states, responsive layout and focused daily
+                workflows.</p>
+              <div class="project-links"><a href="https://productive-deshborde.vercel.app/" target="_blank"
+                  rel="noopener noreferrer">Live project</a><a
+                  href="https://github.com/sunilnaginbhai/Productive-Deshborde-" target="_blank"
+                  rel="noopener noreferrer">Source code</a></div>
+            </div>
+          </article>
+          <article class="project-card pop" style="--project-accent:var(--mint);--d:320ms">
+            <div class="project-visual"><img src="assets/images/common/ToLeves-web-img.png"
+                alt="Tolvès web clone project preview" loading="lazy"><span class="project-number">04</span><span
+                class="project-window"><i></i><i></i><i></i></span></div>
+            <div class="project-content">
+              <div class="project-top">
+                <p class="mono">HTML · CSS · JavaScript · Motion</p><span class="project-arrow">↗</span>
+              </div>
+              <h3>Tolvès Web Clone</h3>
+              <p>A visual recreation focused on accurate layout, smooth motion, responsive behavior and polished
+                interaction details.</p>
+              <div class="project-links"><a href="https://responsive-tooleves-project-web.vercel.app/" target="_blank"
+                  rel="noopener noreferrer">Live project</a><a
+                  href="https://github.com/sunilnaginbhai/responsive-tooleves-project-web-" target="_blank"
+                  rel="noopener noreferrer">Source code</a></div>
+            </div>
+          </article>
+        </div>
+        <a class="projects-more btn cream" href="https://github.com/sunilnaginbhai" target="_blank"
+          rel="noopener noreferrer">Explore more on GitHub <span>↗</span></a>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="skills" id="skills">
+      <div class="wrap">
+        <div class="skills-head">
+          <div>
+            <p class="kicker mono">03 · Engineering toolkit</p>
+            <h2 class="section-title pop">Tools I use<br>to ship.</h2>
+          </div>
+          <p class="pop">A practical stack for turning rough ideas into fast, maintainable products. Hover a card to see
+            where each group fits.</p>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card pop" style="--skill-color:var(--cobalt);--d:80ms">
+            <div class="skill-card-top"><span class="skill-icon">&lt;/&gt;</span><span class="mono">01</span></div>
+            <h3>Frontend</h3>
+            <p>Interfaces that are responsive, accessible and pleasant to use.</p>
+            <div class="skill-tags">
+              <span>React</span><span>Next.js</span><span>JavaScript</span><span>TypeScript</span><span>HTML</span><span>CSS</span>
+            </div>
+          </article>
+          <article class="skill-card pop" style="--skill-color:var(--mint);--d:160ms">
+            <div class="skill-card-top"><span class="skill-icon">{ }</span><span class="mono">02</span></div>
+            <h3>Backend</h3>
+            <p>Clear APIs and server-side logic designed for real users.</p>
+            <div class="skill-tags"><span>Node.js</span><span>Express</span><span>REST
+                APIs</span><span>Auth</span><span>Java</span></div>
+          </article>
+          <article class="skill-card pop" style="--skill-color:var(--sun);--d:240ms">
+            <div class="skill-card-top"><span class="skill-icon">DB</span><span class="mono">03</span></div>
+            <h3>Data</h3>
+            <p>Structured data models with queries that stay understandable.</p>
+            <div class="skill-tags"><span>MongoDB</span><span>MySQL</span><span>Redux</span><span>Zustand</span></div>
+          </article>
+          <article class="skill-card pop" style="--skill-color:var(--tomato);--d:320ms">
+            <div class="skill-card-top"><span class="skill-icon">✓</span><span class="mono">04</span></div>
+            <h3>Quality &amp; delivery</h3>
+            <p>Small feedback loops that make releases safer and faster.</p>
+            <div class="skill-tags">
+              <span>Git</span><span>Jest</span><span>Testing</span><span>CI/CD</span><span>Performance</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Engineering Approach (Tabs) -->
+    <section class="manual" id="manual">
+      <div class="wrap">
+        <div class="manual-head">
+          <div>
+            <p class="kicker mono">07 · Engineering approach</p>
+            <h2 class="section-title pop">How I’m<br>learning.</h2>
+          </div>
+          <p class="pop">The principles I’m practising while learning to turn ideas into clear, useful and reliable
+            software.</p>
+        </div>
+
+        <div class="tabs" role="tablist" aria-label="Engineering approach" data-tabs>
+          <button class="tab" role="tab" id="t1" aria-controls="p1" aria-selected="true" style="--c:var(--sun)"><span
+              class="n">01</span> User first</button>
+          <button class="tab" role="tab" id="t2" aria-controls="p2" aria-selected="false" tabindex="-1"
+            style="--c:var(--mint)"><span class="n">02</span> Learn deeply</button>
+          <button class="tab" role="tab" id="t3" aria-controls="p3" aria-selected="false" tabindex="-1"
+            style="--c:var(--lilac)"><span class="n">03</span> Systems over heroics</button>
+          <button class="tab" role="tab" id="t4" aria-controls="p4" aria-selected="false" tabindex="-1"
+            style="--c:var(--pink)"><span class="n">04</span> Make it real</button>
+          <button class="tab" role="tab" id="t5" aria-controls="p5" aria-selected="false" tabindex="-1"
+            style="--c:var(--tomato)"><span class="n">05</span> Automate the boring</button>
+          <button class="tab" role="tab" id="t6" aria-controls="p6" aria-selected="false" tabindex="-1"
+            style="--c:var(--cream)"><span class="n">06</span> Humans for judgment</button>
+        </div>
+
+        <div class="panel" role="tabpanel" id="p1" aria-labelledby="t1" style="--c:var(--sun)">
+          <div>
+            <h3>Start with the outcome.</h3>
+            <p class="body">Before pixels, I ask what has to change for the business and the user. A clear outcome makes
+              every design decision easier to judge.</p>
+            <p class="proof"><span class="mono">Rule in practice</span>Every brief opens with one line: what moves if
+              this works.</p>
+          </div>
+          <figure>
+            <svg class="il il-target" viewBox="0 0 320 200" aria-hidden="true">
+              <circle class="ring-anim" cx="190" cy="100" r="72" fill="none" stroke="var(--tomato)" stroke-width="4" />
+              <circle cx="190" cy="100" r="72" fill="var(--tomato)" stroke="var(--ink)" stroke-width="3"
+                stroke-linejoin="round" />
+              <circle cx="190" cy="100" r="52" fill="var(--cream)" stroke="var(--ink)" stroke-width="3" />
+              <circle cx="190" cy="100" r="32" fill="var(--tomato)" stroke="var(--ink)" stroke-width="3" />
+              <circle cx="190" cy="100" r="13" fill="var(--cream)" stroke="var(--ink)" stroke-width="3" />
+              <g class="arrow-group">
+                <path d="M75.8 60.3L73.4 48.9L90.4 54.9L92.8 66.3Z" fill="var(--sun)" stroke="var(--ink)"
+                  stroke-width="2.6" stroke-linejoin="round" />
+                <path d="M75.8 60.3L66.8 67.8L83.8 73.8L92.8 66.3Z" fill="var(--sun)" stroke="var(--ink)"
+                  stroke-width="2.6" stroke-linejoin="round" />
+                <path d="M70 58.3L186 99" fill="none" stroke="var(--ink)" stroke-width="5" stroke-linecap="round" />
+              </g>
+            </svg>
+            <figcaption class="note">what moves if this works?</figcaption>
+          </figure>
+        </div>
+
+        <div class="panel" role="tabpanel" id="p2" aria-labelledby="t2" style="--c:var(--mint)" hidden>
+          <div>
+            <h3>Hire for range, grow for depth.</h3>
+            <p class="body">I hire curious people, then help each one own a craft. Teams grow when the people in them
+              grow.</p>
+            <p class="proof"><span class="mono">Rule in practice</span>Each designer has a growth plan we write together
+              and revisit every quarter.</p>
+          </div>
+          <figure>
+            <svg class="il il-grow" viewBox="0 0 320 200" aria-hidden="true">
+              <g class="plant-group">
+                <path d="M160 142C160 120 157 100 160 72" fill="none" stroke="var(--ink)" stroke-width="4"
+                  stroke-linecap="round" />
+                <path d="M158 116C138 116 126 104 124 90C142 90 154 100 158 116Z" fill="var(--mint)" stroke="var(--ink)"
+                  stroke-width="3" stroke-linejoin="round" />
+                <path d="M161 98C180 96 192 84 194 70C176 70 164 80 161 98Z" fill="var(--mint)" stroke="var(--ink)"
+                  stroke-width="3" stroke-linejoin="round" />
+                <circle cx="160" cy="66" r="9" fill="var(--sun)" stroke="var(--ink)" stroke-width="3" />
+              </g>
+              <path d="M131 152h58l-7 36h-44z" fill="var(--tomato)" stroke="var(--ink)" stroke-width="3"
+                stroke-linejoin="round" />
+              <rect x="124" y="140" width="72" height="14" rx="4" fill="var(--tomato)" stroke="var(--ink)"
+                stroke-width="3" />
+              <path class="spark-1" d="M112 70l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="var(--sun)" stroke="var(--ink)"
+                stroke-width="2" stroke-linejoin="round" />
+              <path class="spark-2" d="M214 52l2.5 6 6 2.5-6 2.5-2.5 6-2.5-6-6-2.5 6-2.5z" fill="var(--cream)"
+                stroke="var(--ink)" stroke-width="2" stroke-linejoin="round" />
+            </svg>
+            <figcaption class="note">people first</figcaption>
+          </figure>
+        </div>
+
+        <div class="panel" role="tabpanel" id="p3" aria-labelledby="t3" style="--c:var(--lilac)" hidden>
+          <div>
+            <h3>Systems over heroics.</h3>
+            <p class="body">Quality shouldn't depend on who's in the room. Shared systems, review rituals and clear
+              standards make good work repeatable.</p>
+            <p class="proof"><span class="mono">Rule in practice</span>The design system comes first, then review gates
+              before anything ships.</p>
+          </div>
+          <figure>
+            <svg class="il il-blocks" viewBox="0 0 320 200" aria-hidden="true">
+              <path d="M70 182h180" fill="none" stroke="var(--ink)" stroke-width="3.5" stroke-linecap="round" />
+              <rect x="104" y="136" width="62" height="44" rx="7" fill="var(--cobalt)" stroke="var(--ink)"
+                stroke-width="3" stroke-linejoin="round" />
+              <path d="M116 146h12v12h-12zM134 146h12v12h-12zM116 162h12v12h-12zM134 162h12v12h-12z"
+                fill="var(--cream)" />
+              <rect x="168" y="136" width="52" height="44" rx="7" fill="var(--sun)" stroke="var(--ink)" stroke-width="3"
+                stroke-linejoin="round" />
+              <circle cx="194" cy="158" r="10" fill="var(--cream)" stroke="var(--ink)" stroke-width="2.5" />
+              <rect x="124" y="90" width="76" height="44" rx="7" fill="var(--mint)" stroke="var(--ink)" stroke-width="3"
+                stroke-linejoin="round" />
+              <text x="162" y="120" font-family="var(--display)" font-weight="800" font-size="22" text-anchor="middle"
+                fill="var(--ink)">Aa</text>
+              <rect x="142" y="50" width="40" height="38" rx="7" fill="var(--pink)" stroke="var(--ink)" stroke-width="3"
+                stroke-linejoin="round" />
+              <rect x="150" y="63" width="24" height="12" rx="6" fill="var(--cream)" stroke="var(--ink)"
+                stroke-width="2.5" />
+              <circle cx="168" cy="69" r="4" fill="var(--ink)" />
+            </svg>
+            <figcaption class="note">repeatable, not lucky</figcaption>
+          </figure>
+        </div>
+
+        <div class="panel" role="tabpanel" id="p4" aria-labelledby="t4" style="--c:var(--pink)" hidden>
+          <div>
+            <h3>Make it real early.</h3>
+            <p class="body">Prototypes settle debates faster than decks. They travel across languages, time zones and
+              teams.</p>
+            <p class="proof"><span class="mono">Rule in practice</span>If we're arguing, we're prototyping.</p>
+          </div>
+          <figure>
+            <svg class="il il-proto" viewBox="0 0 320 200" aria-hidden="true">
+              <g transform="rotate(-6 70 95)">
+                <rect x="38" y="58" width="66" height="78" rx="4" fill="var(--sun)" stroke="var(--ink)" stroke-width="3"
+                  stroke-linejoin="round" />
+                <path d="M48 72h40M48 84h30M48 100h44M48 112h24" stroke="var(--ink)" stroke-width="2.5"
+                  stroke-linecap="round" stroke-dasharray="4 4" />
+              </g>
+              <path d="M108 82q16-22 34-6" fill="none" stroke="var(--ink)" stroke-width="3" stroke-linecap="round" />
+              <path d="M134 70l9 7-10 5" fill="none" stroke="var(--ink)" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="160" y="16" width="86" height="170" rx="16" fill="var(--cream)" stroke="var(--ink)"
+                stroke-width="3" stroke-linejoin="round" />
+              <rect x="188" y="24" width="30" height="7" rx="3.5" fill="var(--ink)" />
+              <rect x="172" y="42" width="62" height="10" rx="4" fill="var(--ink)" />
+              <rect x="172" y="60" width="62" height="38" rx="7" fill="var(--lilac)" stroke="var(--ink)"
+                stroke-width="2.5" stroke-linejoin="round" />
+              <rect x="172" y="106" width="62" height="26" rx="7" fill="var(--mint)" stroke="var(--ink)"
+                stroke-width="2.5" stroke-linejoin="round" />
+              <rect x="178" y="144" width="50" height="17" rx="8.5" fill="var(--cobalt)" stroke="var(--ink)"
+                stroke-width="2.5" stroke-linejoin="round" />
+            </svg>
+            <figcaption class="note">show, don't tell</figcaption>
+          </figure>
+        </div>
+
+        <div class="panel" role="tabpanel" id="p5" aria-labelledby="t5" style="--c:var(--tomato)" hidden>
+          <div>
+            <h3>AI for speed.</h3>
+            <p class="body">AI drafts flows, explores variants, summarises research and turns components into working
+              code. That frees the team for the problems that need people.</p>
+            <p class="proof"><span class="mono">Rule in practice</span>Our AI tools draft from our design system, never
+              from a blank page.</p>
+          </div>
+          <figure>
+            <svg class="il il-ai" viewBox="0 0 320 200" aria-hidden="true">
+              <path d="M146 58h14M140 102h20M146 146h14" fill="none" stroke="var(--ink)" stroke-width="3"
+                stroke-linecap="round" stroke-dasharray="6 5" />
+              <g>
+                <rect x="170" y="38" width="112" height="38" rx="9" fill="var(--cream)" stroke="var(--ink)"
+                  stroke-width="2.5" stroke-linejoin="round" />
+                <path d="M179 38h7v38h-7a9 9 0 0 1-9-9v-20a9 9 0 0 1 9-9z" fill="var(--sun)" />
+                <path d="M198 52h58M198 63h38" stroke="var(--ink)" stroke-width="3" stroke-linecap="round" />
+              </g>
+              <g>
+                <rect x="170" y="83" width="112" height="38" rx="9" fill="var(--cream)" stroke="var(--ink)"
+                  stroke-width="2.5" stroke-linejoin="round" />
+                <path d="M179 83h7v38h-7a9 9 0 0 1-9-9v-20a9 9 0 0 1 9-9z" fill="var(--mint)" />
+                <path d="M198 97h64M198 108h32" stroke="var(--ink)" stroke-width="3" stroke-linecap="round" />
+              </g>
+              <g>
+                <rect x="170" y="128" width="112" height="38" rx="9" fill="var(--cream)" stroke="var(--ink)"
+                  stroke-width="2.5" stroke-linejoin="round" />
+                <path d="M179 128h7v38h-7a9 9 0 0 1-9-9v-20a9 9 0 0 1 9-9z" fill="var(--lilac)" />
+                <path d="M198 142h50M198 153h42" stroke="var(--ink)" stroke-width="3" stroke-linecap="round" />
+              </g>
+              <!-- Robot -->
+              <g transform="translate(34 44) scale(2.7)">
+                <path d="M12 37q0-7 8-7t8 7z" fill="var(--lilac)" stroke="var(--ink)" stroke-width="1.6"
+                  stroke-linejoin="round" />
+                <path d="M20 9V5.5" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round" />
+                <circle cx="20" cy="4.5" r="2.4" fill="var(--sun)" stroke="var(--ink)" stroke-width="1.4" />
+                <rect x="3.5" y="15" width="4" height="8" rx="1.5" fill="var(--ink)" />
+                <rect x="32.5" y="15" width="4" height="8" rx="1.5" fill="var(--ink)" />
+                <rect x="7" y="9" width="26" height="21" rx="6" fill="var(--cobalt)" stroke="var(--ink)"
+                  stroke-width="1.6" />
+                <rect x="11" y="13" width="18" height="12" rx="4" fill="var(--cream)" />
+                <circle cx="16" cy="18" r="2" fill="var(--ink)" />
+                <circle cx="24" cy="18" r="2" fill="var(--ink)" />
+                <path d="M17 21.5q3 2 6 0" fill="none" stroke="var(--ink)" stroke-width="1.5" stroke-linecap="round" />
+              </g>
+            </svg>
+            <figcaption class="note">drafts in minutes</figcaption>
+          </figure>
+        </div>
+
+        <div class="panel" role="tabpanel" id="p6" aria-labelledby="t6" style="--c:var(--cream)" hidden>
+          <div>
+            <h3>Humans for taste.</h3>
+            <p class="body">AI widens the options, and people choose. Judgment, ethics and craft stay with the team.</p>
+            <p class="proof"><span class="mono">Rule in practice</span>Nothing ships without a designer's review.</p>
+          </div>
+          <figure>
+            <svg class="il il-taste" viewBox="0 0 320 200" aria-hidden="true">
+              <rect x="38" y="50" width="72" height="96" rx="9" fill="var(--cream)" stroke="var(--ink)" stroke-width="3"
+                stroke-linejoin="round" />
+              <rect x="48" y="60" width="52" height="40" rx="5" fill="var(--tomato)" />
+              <path d="M50 114h40M50 126h28" stroke="var(--ink)" stroke-width="3" stroke-linecap="round" />
+              <rect x="124" y="50" width="72" height="96" rx="9" fill="var(--cream)" stroke="var(--cobalt)"
+                stroke-width="3.5" stroke-linejoin="round" />
+              <rect x="134" y="60" width="52" height="40" rx="5" fill="var(--cobalt)" />
+              <path d="M136 114h40M136 126h28" stroke="var(--ink)" stroke-width="3" stroke-linecap="round" />
+              <circle cx="190" cy="54" r="15" fill="var(--sun)" stroke="var(--ink)" stroke-width="3" />
+              <path d="M183 54l5 5 9-10" fill="none" stroke="var(--ink)" stroke-width="3.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="210" y="50" width="72" height="96" rx="9" fill="var(--cream)" stroke="var(--ink)"
+                stroke-width="3" stroke-linejoin="round" />
+              <rect x="220" y="60" width="52" height="40" rx="5" fill="var(--mint)" />
+              <path d="M222 114h40M222 126h28" stroke="var(--ink)" stroke-width="3" stroke-linecap="round" />
+            </svg>
+            <figcaption class="note">a designer signs off</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Professional path -->
+    <section class="path" id="path">
+      <div class="levels-head">
+        <p class="kicker mono">04 · Professional path</p>
+        <h2 class="section-title pop">Learn, build,<br>keep going.</h2>
+        <p class="pop">The milestones that shaped how I think, code and solve problems.</p>
+      </div>
+      <div class="path-line">
+        <ol>
+          <li class="path-item pop" data-level>
+            <span class="path-node">01</span>
+            <div class="path-card">
+              <p class="mono">JUN 2025 – MAY 2029</p>
+              <h3>B.E. in Computer Engineering</h3>
+              <p class="path-place">Gujarat Technological University</p>
+              <p>Currently pursuing a strong foundation in software, systems and problem solving.</p>
+            </div>
+          </li>
+          <li class="path-item pop" data-level>
+            <span class="path-node">02</span>
+            <div class="path-card">
+              <p class="mono">CURRENT · COHORT 3.0</p>
+              <h3>Full-stack development</h3>
+              <p class="path-place">Sheryians Coding School</p>
+              <p>Currently learning full-stack development through structured lessons, practice and hands-on projects.
+              </p>
+            </div>
+          </li>
+          <li class="path-item pop" data-level>
+            <span class="path-node">03</span>
+            <div class="path-card">
+              <p class="mono">NOW · LEARNING</p>
+              <h3>Practice projects</h3>
+              <p class="path-place">Sunil Patel</p>
+              <p>Building projects to strengthen my frontend skills, explore backend tools and learn by making.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Achievements -->
+    <section class="achievements-section" id="achievements">
+      <div class="wrap">
+        <div class="achievements-head">
+          <div>
+            <p class="kicker mono">05 · Achievements</p>
+            <h2 class="section-title pop">Proof of<br>practice.</h2>
+          </div>
+          <p class="pop">Certificates and challenges that reflect the skills I’m building beyond the classroom.</p>
+        </div>
+        <div class="certificate-grid">
+          <article class="certificate-card pop" style="--certificate-color:var(--cobalt);--d:80ms">
+            <span class="certificate-mark">IBM</span>
+            <p class="mono">PYTHON · CERTIFICATE</p>
+            <h3>IBM Python Skills</h3>
+            <p>Practising Python fundamentals, problem solving and programming concepts.</p>
+            <a class="certificate-link" href="assets/images/certificates/Completion%20Certificate%20_%20SkillsBuild.pdf"
+              target="_blank" rel="noopener noreferrer">View certificate ↗</a>
+          </article>
+          <article class="certificate-card pop" style="--certificate-color:var(--mint);--d:160ms">
+            <span class="certificate-mark">HR</span>
+            <p class="mono">PROBLEM SOLVING · BASIC</p>
+            <h3>HackerRank Problem Solving</h3>
+            <p>Verified skill certificate demonstrating foundational problem-solving ability.</p>
+            <a class="certificate-link" href="https://www.hackerrank.com/certificates/iframe/79249cd999e4"
+              target="_blank" rel="noopener noreferrer">Verify certificate ↗</a>
+          </article>
+          <article class="certificate-card pop" style="--certificate-color:var(--sun);--d:240ms">
+            <span class="certificate-mark">G</span>
+            <p class="mono">AI · LEARNING</p>
+            <h3>Google Gemini</h3>
+            <p>Exploring Gemini tools and practical AI workflows for learning and building.</p>
+            <a class="certificate-link"
+              href="assets/images/certificates/Google%20fund%20my%20crazy%20certificate%20Sunil%20Naginbhai%202.pdf"
+              target="_blank" rel="noopener noreferrer">View certificate ↗</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Side Quests -->
+    <section class="quests" id="quests">
+      <div class="wrap">
+        <div class="quests-head">
+          <div>
+            <p class="kicker mono">06 · Side quests</p>
+            <h2 class="section-title pop">After hours.</h2>
+          </div>
+          <div class="pop">
+            <p>The work that doesn't fit on a resume — games, illustrations, experiments, and the things I make for fun.
+            </p>
+          </div>
+        </div>
+
+        <div class="achievements">
+          <div class="ach pop" style="--d:100ms">
+            <div class="medal" style="--c:var(--sun)">🎮</div>
+            <div>
+              <h4>Learning by building</h4>
+              <p>Turning lessons into small projects that make each new concept practical</p>
+            </div>
+          </div>
+          <div class="ach pop" style="--d:200ms">
+            <div class="medal" style="--c:var(--mint)">🤖</div>
+            <div>
+              <h4>Cohort 3.0 student</h4>
+              <p>Learning full-stack development with the Sheryians Coding School community</p>
+            </div>
+          </div>
+          <div class="ach pop" style="--d:300ms">
+            <div class="medal" style="--c:var(--lilac)">🎨</div>
+            <div>
+              <h4>Frontend foundations</h4>
+              <p>Practising responsive layouts, reusable components and accessible interfaces</p>
+            </div>
+          </div>
+          <div class="ach pop" style="--d:400ms">
+            <div class="medal" style="--c:var(--pink)">☕</div>
+            <div>
+              <h4>Curious by default</h4>
+              <p>Exploring new tools, solving problems and improving one project at a time</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+      <div class="wrap">
+        <p class="kicker mono">08 · Say hi</p>
+        <div class="contact-main">
+          <div>
+            <h2 class="pop">Let's<br>make<br>something<br><span class="y">great.</span></h2>
+            <p class="sub">Based in Gujarat. I’m currently learning full-stack development at Sheryians Coding School as
+              part of Cohort 3.0 and building projects with JavaScript, React and Node.js.</p>
+            <div class="contact-ctas">
+              <a class="btn sun" href="mailto:sunilnaginbhai@gmail.com">Email me</a>
+              <a class="btn cream" href="assets/files/Sunil_Patel_Resume_v2.pdf" download>Download resume</a>
+              <a class="btn cream" href="https://www.linkedin.com/in/sunil-patel-5ab064384/" target="_blank"
+                rel="noopener noreferrer">LinkedIn</a>
+              <a class="btn cream" href="https://github.com/sunilnaginbhai" target="_blank"
+                rel="noopener noreferrer">GitHub</a>
+              <a class="btn cream" href="https://leetcode.com/u/sunil_snp/" target="_blank"
+                rel="noopener noreferrer">LeetCode</a>
+            </div>
+          </div>
+          <div class="contact-me" aria-hidden="true">
+            <div class="contact-avatar">
+              <img class="contact-avatar-inner" src="assets/images/sunil%20photo%20.png" alt="">
+            </div>
+          </div>
+        </div>
+        <footer class="foot">
+          <p>© 2026 Sunil Patel. Built with curiosity.</p>
+          <p>Built with HTML, CSS &amp; JavaScript.</p>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <!-- 60-second version dialog -->
+  <dialog class="tldr" id="tldr-dialog">
+    <div class="tldr-head">
+      <h2>⏱️ 60-second version</h2>
+      <button class="close" type="button" data-tldr-close aria-label="Close">✕</button>
+    </div>
+    <div class="tldr-body">
+      <p class="who">Sunil Patel — Student developer, Gujarat.</p>
+      <ul>
+        <li><b>→</b> Learning to build responsive interfaces with React and modern JavaScript</li>
+        <li><b>→</b> Practising reusable components, clean layouts and accessible interactions</li>
+        <li><b>→</b> Exploring Node.js APIs, backend concepts and structured data</li>
+        <li><b>→</b> Building projects to turn lessons into practical experience</li>
+        <li><b>→</b> Learning through feedback, experimentation and consistent practice</li>
+        <li><b>→</b> Growing from frontend foundations toward full-stack development</li>
+      </ul>
+      <div class="ctas">
+        <a class="btn" href="#work">See the work</a>
+        <a class="btn cream" href="mailto:sunilnaginbhai@gmail.com">Say hi</a>
+      </div>
+    </div>
+  </dialog>
+
+  <button class="back-top" type="button" data-back-top aria-label="Back to top">↑</button>
+  <script src="script.js"></script>
+</body>
+
+</html>
