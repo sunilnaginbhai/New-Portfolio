@@ -27,26 +27,65 @@
     };
     window.addEventListener('scroll', update, { passive: true });
     update();
+    initActiveSection();
     if (backTop) {
       backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    }
+
+    function initActiveSection() {
+      const links = Array.from(document.querySelectorAll('.desktop-nav a, [data-mobile-menu] a'));
+      const sections = links
+        .map(link => document.querySelector(link.getAttribute('href')))
+        .filter(Boolean);
+      if (!sections.length) return;
+
+      const setActive = (id) => {
+        links.forEach(link => {
+          const active = link.getAttribute('href') === '#' + id;
+          link.classList.toggle('active', active);
+          if (active) link.setAttribute('aria-current', 'true');
+          else link.removeAttribute('aria-current');
+        });
+      };
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) setActive(entry.target.id);
+        });
+      }, { rootMargin: '-35% 0px -55% 0px', threshold: 0 });
+      sections.forEach(section => observer.observe(section));
     }
 
     const glow = document.querySelector('[data-cursor-glow]');
     const dot = document.querySelector('[data-cursor-dot]');
     const ring = document.querySelector('[data-cursor-ring]');
-    if (glow && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    const canUseSpotlight = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (glow && canUseSpotlight && !reduceMotion) {
+      let pointerFrame = 0;
+      let pointerX = 0;
+      let pointerY = 0;
+      const renderPointer = () => {
+        glow.style.setProperty('--cursor-x', pointerX + 'px');
+        glow.style.setProperty('--cursor-y', pointerY + 'px');
+        if (dot) {
+          dot.style.left = pointerX + 'px';
+          dot.style.top = pointerY + 'px';
+        }
+        if (ring) {
+          ring.style.left = pointerX + 'px';
+          ring.style.top = pointerY + 'px';
+        }
+        pointerFrame = 0;
+      };
       document.addEventListener('pointermove', (event) => {
-        glow.style.left = event.clientX + 'px';
-        glow.style.top = event.clientY + 'px';
+        pointerX = event.clientX;
+        pointerY = event.clientY;
+        if (!pointerFrame) pointerFrame = requestAnimationFrame(renderPointer);
         glow.style.opacity = '1';
         if (dot) {
-          dot.style.left = event.clientX + 'px';
-          dot.style.top = event.clientY + 'px';
           dot.style.opacity = '1';
         }
         if (ring) {
-          ring.style.left = event.clientX + 'px';
-          ring.style.top = event.clientY + 'px';
           ring.style.opacity = '1';
         }
       }, { passive: true });
