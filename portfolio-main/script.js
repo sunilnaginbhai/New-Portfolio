@@ -13,7 +13,49 @@
     initScrollUI();
     initMobileMenu();
     initCardTilt();
+    initThemeToggle();
   });
+
+  /* ─── Light / dark theme ───────────────────────────────────────────── */
+  function initThemeToggle() {
+    const toggle = document.querySelector('[data-theme-toggle]');
+    if (!toggle) return;
+
+    const root = document.documentElement;
+    const themeColor = document.querySelector('meta[name="theme-color"]');
+    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+    const setTheme = (theme, persist) => {
+      const nextTheme = theme === 'dark' ? 'dark' : 'light';
+      root.dataset.theme = nextTheme;
+      toggle.setAttribute('aria-pressed', String(nextTheme === 'dark'));
+      toggle.setAttribute('aria-label', nextTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+      if (themeColor) themeColor.setAttribute('content', nextTheme === 'dark' ? '#10151D' : '#FFFFFF');
+
+      if (persist) {
+        try {
+          localStorage.setItem('portfolio-theme', nextTheme);
+        } catch (error) {
+          // The selected theme remains active for this visit.
+        }
+      }
+    };
+
+    setTheme(root.dataset.theme || (systemTheme.matches ? 'dark' : 'light'), false);
+    toggle.addEventListener('click', () => {
+      setTheme(root.dataset.theme === 'dark' ? 'light' : 'dark', true);
+    });
+
+    systemTheme.addEventListener?.('change', (event) => {
+      try {
+        if (!localStorage.getItem('portfolio-theme')) {
+          setTheme(event.matches ? 'dark' : 'light', false);
+        }
+      } catch (error) {
+        setTheme(event.matches ? 'dark' : 'light', false);
+      }
+    });
+  }
 
   /* ─── Scroll progress and back-to-top control ─────────────────────── */
   function initScrollUI() {

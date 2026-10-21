@@ -25,6 +25,19 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=DM+Sans:wght@400;500;600;700&family=Space+Mono&display=swap"
     rel="stylesheet">
+  <script>
+    (() => {
+      let savedTheme = null;
+      try {
+        savedTheme = localStorage.getItem('portfolio-theme');
+      } catch (error) {
+        // Fall back to the system preference if storage is unavailable.
+      }
+      const validTheme = savedTheme === 'dark' || savedTheme === 'light' ? savedTheme : null;
+      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.dataset.theme = validTheme || systemTheme;
+    })();
+  </script>
   <link rel="stylesheet" href="style.css">
   <script>document.documentElement.classList.add('js')</script>
 </head>
@@ -59,6 +72,20 @@
         </button>
       </div>
       <div class="nav-actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false"
+          aria-label="Switch to dark mode" title="Switch theme">
+          <span class="theme-toggle-track" aria-hidden="true">
+            <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" focusable="false">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"></path>
+            </svg>
+            <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" focusable="false">
+              <path d="M20.5 14.6A8.5 8.5 0 0 1 9.4 3.5 8.5 8.5 0 1 0 20.5 14.6Z"></path>
+            </svg>
+            <span class="theme-toggle-thumb"></span>
+          </span>
+          <span class="sr-only">Toggle light and dark mode</span>
+        </button>
         <button class="btn sm sun" type="button" id="tldr-open-btn" data-tldr-open>
           <span class="wiggle">
             <svg class="ei ei-stopwatch" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
