@@ -33,9 +33,8 @@
       } catch (error) {
         // Fall back to the system preference if storage is unavailable.
       }
-      const validTheme = savedTheme === 'dark' || savedTheme === 'light' ? savedTheme : null;
-      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      document.documentElement.dataset.theme = validTheme || systemTheme;
+      const validTheme = savedTheme === 'dark' || savedTheme === 'light' ? savedTheme : 'light';
+      document.documentElement.dataset.theme = validTheme;
     })();
   </script>
   <link rel="stylesheet" href="style.css">

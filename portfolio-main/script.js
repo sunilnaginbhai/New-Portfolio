@@ -23,7 +23,6 @@
 
     const root = document.documentElement;
     const themeColor = document.querySelector('meta[name="theme-color"]');
-    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
 
     const setTheme = (theme, persist) => {
       const nextTheme = theme === 'dark' ? 'dark' : 'light';
@@ -41,19 +40,9 @@
       }
     };
 
-    setTheme(root.dataset.theme || (systemTheme.matches ? 'dark' : 'light'), false);
+    setTheme(root.dataset.theme || 'light', false);
     toggle.addEventListener('click', () => {
       setTheme(root.dataset.theme === 'dark' ? 'light' : 'dark', true);
-    });
-
-    systemTheme.addEventListener?.('change', (event) => {
-      try {
-        if (!localStorage.getItem('portfolio-theme')) {
-          setTheme(event.matches ? 'dark' : 'light', false);
-        }
-      } catch (error) {
-        setTheme(event.matches ? 'dark' : 'light', false);
-      }
     });
   }
 
